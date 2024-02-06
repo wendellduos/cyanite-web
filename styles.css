@@ -1,0 +1,66 @@
+:root {
+  --blue: #3692ef;
+  --bluee: #49a3ff;
+  --blueee: #a6cff9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 500vh;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img/header-deco.png");
+  background-repeat: no-repeat;
+  background-size: 210px;
+  background-position: 0 120px;
+}
+
+.limiter {
+  max-width: 2200px;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 118px;
+  left: 0;
+  display: block;
+  width: 40%;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    var(--blue) 50%,
+    rgba(166, 207, 249, 0)
+  );
+}
+
+#header-logo {
+  height: 3rem;
+}
