@@ -6,7 +6,7 @@
   --blueee: #a6cff9;
   --dark: #3a4249;
   --dark-disabled: #acb1b6;
-  --light: #e4e6eb;
+  --light: #f1f3f8;
 }
 
 * {
@@ -25,17 +25,6 @@ body {
   height: 500vh;
 }
 
-/* body::after {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/img/header-deco.png");
-  background-repeat: no-repeat;
-  background-size: 210px;
-  background-position: 0 120px;
-} */
-
 .limiter {
   max-width: 2200px;
   margin: auto;
@@ -46,9 +35,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -59,14 +48,27 @@ header div {
 }
 
 #header-logo {
-  height: 3rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-image: url("./assets/img/lettering.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 630px) {
+  #header-logo {
+    width: 3rem;
+    height: 3rem;
+    background-image: url("./assets/img/1x1-logo.png");
+    background-size: cover;
+  }
 }
 
 #user {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   text-decoration: none;
   font-weight: 500;
   color: var(--dark);
@@ -80,17 +82,17 @@ header div {
 }
 
 #user img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #cart {
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 1rem;
   background-image: url("./assets/icons/shopping-cart.svg");
-  background-size: 2rem 2rem;
+  background-size: 1.5rem 1.5rem;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
